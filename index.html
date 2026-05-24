@@ -1,0 +1,2172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE ENTREPRENEUR ART DAY 2026 | 起業家アート協会</title>
+<meta name="description" content="ビジネスとアートが交わる実践者たちの集い。2026年8月3日、Tokyo Innovation Baseにて開催。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #161513;
+    --ink-soft: #2A2722;
+    --paper: #F7F1E5;
+    --paper-warm: #EFE6D2;
+    --paper-deep: #E8DCC0;
+    --cobalt: #1F3FB5;
+    --magenta: #E5275A;
+    --mustard: #E8B040;
+    --forest: #2C6E4F;
+    --lavender: #8B5FBF;
+    --coral: #E76F35;
+    --cream: #F9E9C8;
+    --line: rgba(22, 21, 19, 0.15);
+
+    --font-display-jp: "Shippori Mincho B1", serif;
+    --font-display-en: "Fraunces", serif;
+    --font-body: "Noto Sans JP", sans-serif;
+    --font-mono: "Space Mono", monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--paper);
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Paper grain texture */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>");
+    mix-blend-mode: multiply;
+  }
+
+  /* ================== NAV ================== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(247, 241, 229, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .brand {
+    font-family: var(--font-display-en);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  nav .brand span { font-family: var(--font-display-jp); margin-left: 6px; }
+  nav .nav-links {
+    display: flex;
+    gap: 28px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  nav .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  nav .nav-links a:hover { color: var(--magenta); }
+  nav .apply-btn {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 22px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  nav .apply-btn:hover { background: var(--magenta); }
+
+  /* ================== HERO ================== */
+  .hero {
+    min-height: 100vh;
+    padding: 140px 40px 80px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .hero-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    position: relative;
+    z-index: 3;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .hero-meta span:not(:last-child)::after {
+    content: "—";
+    margin-left: 32px;
+    opacity: 0.4;
+  }
+  .hero-year {
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    font-family: var(--font-display-en);
+    font-size: clamp(180px, 28vw, 420px);
+    font-weight: 200;
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--ink);
+    opacity: 0.12;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+  .hero-title {
+    font-family: var(--font-display-en);
+    font-size: clamp(48px, 9vw, 140px);
+    font-weight: 350;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-title .stroke { font-style: italic; font-weight: 300; }
+  .hero-title .blob {
+    display: inline-block;
+    padding: 0 0.15em;
+    background: var(--mustard);
+    color: var(--ink);
+    transform: rotate(-1.5deg);
+    margin: 0 0.05em;
+  }
+  .hero-subtitle {
+    font-family: var(--font-display-jp);
+    font-size: clamp(20px, 2.6vw, 36px);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 36px;
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-subtitle::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--magenta);
+    margin-bottom: 24px;
+  }
+  .hero-info {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 32px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+  .info-item .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .info-item .value {
+    font-family: var(--font-display-jp);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .info-item .value .en {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .hero-cta-row {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 36px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.25s;
+  }
+  .btn-primary:hover { background: var(--magenta); border-color: var(--magenta); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+  .btn-primary .arrow { font-family: var(--font-display-en); font-size: 16px; }
+
+  .btn-ghost {
+    color: var(--ink);
+    padding: 18px 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    transition: opacity 0.2s;
+  }
+  .btn-ghost:hover { opacity: 0.6; }
+
+  /* Decorative shapes */
+  .shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .shape-1 { top: 200px; right: 8%; width: 80px; height: 80px; background: var(--magenta); border-radius: 50%; }
+  .shape-2 { top: 380px; right: 18%; width: 24px; height: 24px; background: var(--cobalt); }
+  .shape-3 { top: 280px; right: 2%; width: 60px; height: 6px; background: var(--forest); transform: rotate(45deg); }
+
+  /* ================== SECTION BASE ================== */
+  section { position: relative; z-index: 2; }
+
+  .section-header {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: end;
+  }
+  .section-number {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+  }
+  .section-title-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 20px;
+  }
+  .section-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .section-title {
+    font-family: var(--font-display-en);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 350;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .section-title .jp {
+    font-family: var(--font-display-jp);
+    font-weight: 600;
+  }
+  .section-title .italic { font-style: italic; }
+
+  /* ================== ABOUT ================== */
+  .about {
+    padding: 140px 0 120px;
+    background: var(--paper-warm);
+    position: relative;
+  }
+  .about-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .quote-block {
+    position: relative;
+    padding: 40px 0;
+  }
+  .quote-mark {
+    font-family: var(--font-display-en);
+    font-size: 140px;
+    line-height: 0.8;
+    color: var(--magenta);
+    margin-bottom: -20px;
+    font-weight: 400;
+  }
+  .quote-text {
+    font-family: var(--font-display-jp);
+    font-size: clamp(20px, 1.8vw, 26px);
+    font-weight: 500;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+  }
+  .quote-attribution {
+    margin-top: 30px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .about-text {
+    font-size: 15px;
+    line-height: 2;
+  }
+  .about-text p { margin-bottom: 24px; }
+  .about-text .highlight {
+    background: linear-gradient(transparent 60%, var(--mustard) 60%);
+    padding: 0 4px;
+  }
+
+  .pillars {
+    max-width: 1400px;
+    margin: 100px auto 0;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .pillar {
+    padding: 40px 30px;
+    border-top: 4px solid;
+    background: var(--paper);
+  }
+  .pillar:nth-child(1) { border-color: var(--cobalt); }
+  .pillar:nth-child(2) { border-color: var(--magenta); }
+  .pillar:nth-child(3) { border-color: var(--forest); }
+  .pillar-num {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .pillar:nth-child(1) .pillar-num { color: var(--cobalt); }
+  .pillar:nth-child(2) .pillar-num { color: var(--magenta); }
+  .pillar:nth-child(3) .pillar-num { color: var(--forest); }
+  .pillar h3 {
+    font-family: var(--font-display-jp);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .pillar p { font-size: 14px; line-height: 1.85; }
+
+  /* ================== AUDIENCE ================== */
+  .audience {
+    padding: 140px 0 120px;
+    background: var(--paper);
+  }
+  .audience-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--ink);
+    border-left: 1px solid var(--ink);
+  }
+  .audience-card {
+    padding: 40px 30px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+    transition: background 0.4s;
+  }
+  .audience-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 12px; height: 12px;
+    background: var(--ink);
+  }
+  .audience-card:nth-child(1):hover { background: rgba(31, 63, 181, 0.1); }
+  .audience-card:nth-child(2):hover { background: rgba(229, 39, 90, 0.1); }
+  .audience-card:nth-child(3):hover { background: rgba(232, 176, 64, 0.18); }
+  .audience-card:nth-child(4):hover { background: rgba(44, 110, 79, 0.1); }
+  .audience-card:nth-child(5):hover { background: rgba(139, 95, 191, 0.12); }
+
+  .audience-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    margin-bottom: 24px;
+  }
+  .audience-card h4 {
+    font-family: var(--font-display-jp);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .audience-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: 0.75;
+  }
+
+  /* ================== TIMELINE OVERVIEW ================== */
+  .day-flow {
+    padding: 140px 0 120px;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .day-flow .section-title { color: var(--paper); }
+  .day-flow .section-title-row { border-color: var(--paper); }
+  .day-flow .section-eyebrow { color: var(--mustard); opacity: 1; }
+  .day-flow .section-number { color: var(--mustard); opacity: 1; }
+
+  .flow-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .flow-track {
+    position: relative;
+    padding: 30px 0;
+  }
+  .flow-line {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50px;
+    width: 2px;
+    background: var(--paper);
+    opacity: 0.3;
+  }
+  .flow-item {
+    position: relative;
+    padding-left: 100px;
+    padding-bottom: 50px;
+  }
+  .flow-item:last-child { padding-bottom: 0; }
+  .flow-dot {
+    position: absolute;
+    left: 41px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 0 0 0 2px var(--paper);
+  }
+  .flow-item.major .flow-dot {
+    width: 28px;
+    height: 28px;
+    left: 37px;
+    background: var(--mustard);
+  }
+  .flow-time {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--mustard);
+    margin-bottom: 6px;
+  }
+  .flow-title {
+    font-family: var(--font-display-jp);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .flow-desc {
+    font-size: 14px;
+    opacity: 0.7;
+    max-width: 600px;
+  }
+
+  /* ================== SIDE PROGRAMS ================== */
+  .side-programs {
+    padding: 140px 0 120px;
+    background: var(--lavender);
+    color: var(--paper);
+    position: relative;
+    background-color:#000000;
+  }
+  .side-programs .section-title { color: var(--paper); }
+  .side-programs .section-title-row { border-color: var(--paper); }
+  .side-programs .section-eyebrow,
+  .side-programs .section-number { color: var(--cream); opacity: 1; }
+
+  .side-intro {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+    font-family: var(--font-display-jp);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    max-width: 760px;
+    padding-left: 40px;
+  }
+  .side-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .side-card {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 36px 30px;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  .side-card:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 var(--ink); }
+  .side-card.coming-soon {
+    background: transparent;
+    border: 2px dashed var(--paper);
+    color: var(--paper);
+  }
+  .side-card .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background: var(--mustard);
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .side-card.coming-soon .tag { background: transparent; border: 1px solid var(--paper); color: var(--paper); }
+  .side-card h4 {
+    font-family: var(--font-display-jp);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+  .side-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    opacity: 0.85;
+  }
+  .side-card .card-link {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 4px;
+    border-bottom: 1px solid currentColor;
+  }
+  .side-card .price-note {
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+
+  /* ================== MAIN PROGRAM ================== */
+  .main-program {
+    padding: 140px 0 120px;
+    background: var(--paper-warm);
+  }
+  .program-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .program-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    padding: 36px 0;
+    border-top: 1px solid var(--ink);
+    align-items: start;
+  }
+  .program-item:last-child { border-bottom: 1px solid var(--ink); }
+  .program-time {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 350;
+    line-height: 1;
+    color: var(--magenta);
+  }
+  .program-time-end {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    opacity: 0.5;
+    margin-top: 8px;
+    letter-spacing: 0.1em;
+  }
+  .program-info .program-cat {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+    border: 1px solid var(--ink);
+  }
+  .program-info h4 {
+    font-family: var(--font-display-jp);
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 700;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+  .program-info p { font-size: 15px; line-height: 1.85; opacity: 0.85; }
+  .program-info .speaker {
+    margin-top: 14px;
+    font-family: var(--font-display-jp);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .program-info .speaker .role {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-left: 8px;
+    opacity: 0.6;
+  }
+  .program-info .award-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--magenta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--magenta);
+    padding-bottom: 2px;
+  }
+
+  /* LIGHTNING TALK SPECIAL */
+  .lt-slots {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+  }
+  .lt-slot {
+    aspect-ratio: 1;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    opacity: 0.15;
+  }
+  .lt-slot.filled {
+    opacity: 1;
+    background: var(--magenta);
+  }
+
+  /* ================== AWARD ================== */
+  .award {
+    padding: 140px 0 120px;
+    background: #000000;
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .award .section-title { color: var(--paper); }
+  .award .section-title-row { border-color: var(--paper); }
+  .award .section-eyebrow,
+  .award .section-number { color: var(--ink); opacity: 1; }
+
+  .award-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .award-big-text {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .award-jp {
+    font-family: var(--font-display-jp);
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 24px;
+    line-height: 1.5;
+  }
+  .award-desc p {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 24px;
+  }
+  .award-cta {
+    margin-top: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 18px 32px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .award-cta:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+
+  /* ================== CALL FOR PARTICIPANTS ================== */
+  .call {
+    padding: 140px 0 120px;
+    background: var(--paper);
+  }
+  .call-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .call-card {
+    padding: 50px 40px;
+    position: relative;
+    background: var(--paper-warm);
+    border: 1px solid var(--ink);
+    transition: all 0.3s;
+  }
+  .call-card:hover { transform: translate(-4px, -4px); box-shadow: 8px 8px 0 var(--ink); }
+  .call-card .call-tag {
+    position: absolute;
+    top: -1px;
+    left: 30px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+  }
+  .call-card:nth-child(1) .call-tag { background: var(--cobalt); }
+  .call-card:nth-child(2) .call-tag { background: var(--magenta); }
+  .call-card:nth-child(3) .call-tag { background: var(--forest); }
+  .call-card:nth-child(4) .call-tag { background: var(--mustard); color: var(--ink); }
+  .call-card .call-num {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .call-card:nth-child(1) .call-num { color: var(--cobalt); }
+  .call-card:nth-child(2) .call-num { color: var(--magenta); }
+  .call-card:nth-child(3) .call-num { color: var(--forest); }
+  .call-card:nth-child(4) .call-num { color: var(--mustard); }
+  .call-card h4 {
+    font-family: var(--font-display-jp);
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .call-card p {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 24px;
+    opacity: 0.8;
+  }
+  .call-card .call-link {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  /* ================== SPONSORS ================== */
+  .sponsors {
+    padding: 140px 0 120px;
+    background: var(--paper-warm);
+  }
+  .sponsor-intro {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+    font-family: var(--font-display-jp);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    padding-left: 40px;
+  }
+  .sponsor-tiers {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    gap: 20px;
+  }
+  .tier {
+    border: 1px solid var(--ink);
+    padding: 30px 40px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    align-items: center;
+    background: var(--paper);
+  }
+  .tier-name {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 350;
+  }
+  .tier-name .jp {
+    display: block;
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 6px;
+  }
+  .tier-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .tier-slot {
+    aspect-ratio: 3 / 2;
+    border: 1px dashed var(--ink);
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .tier.gold { background: linear-gradient(135deg, var(--mustard) 0%, var(--cream) 100%); }
+  .tier.gold .tier-name { color: var(--ink); }
+  .tier.silver { background: linear-gradient(135deg, #DCD5C5 0%, var(--paper) 100%); }
+  .tier.bronze { background: linear-gradient(135deg, #D4A574 0%, var(--paper) 100%); }
+  .recruit-banner {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .recruit-banner p {
+    font-family: var(--font-display-jp);
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .recruit-banner a {
+    display: inline-block;
+    background: var(--mustard);
+    color: var(--ink);
+    padding: 14px 28px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  /* ================== AFTER PARTY ================== */
+  .after-party {
+    padding: 140px 0 120px;
+    background: var(--magenta);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .ap-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.15;
+    background-image: repeating-linear-gradient(-45deg, var(--paper) 0 2px, transparent 2px 30px);
+  }
+  .ap-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .ap-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0.8;
+  }
+  .ap-title {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: clamp(48px, 7vw, 96px);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .ap-jp {
+    font-family: var(--font-display-jp);
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  .ap-info {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .ap-info .time {
+    font-family: var(--font-display-en);
+    font-size: 56px;
+    font-weight: 350;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .ap-cta {
+    margin-top: 24px;
+    display: inline-block;
+    background: var(--paper);
+    color: var(--magenta);
+    padding: 16px 28px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  /* ================== ABOUT ASSOC ================== */
+  .assoc {
+    padding: 140px 0 120px;
+    background: var(--paper);
+  }
+  .assoc-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .assoc-text p { font-size: 15px; line-height: 2; margin-bottom: 20px; }
+  .directors {
+    display: grid;
+    gap: 24px;
+  }
+  .director {
+    padding: 24px;
+    border-left: 4px solid var(--ink);
+    background: var(--paper-warm);
+  }
+  .director:nth-child(1) { border-color: var(--cobalt); }
+  .director:nth-child(2) { border-color: var(--magenta); }
+  .director:nth-child(3) { border-color: var(--forest); }
+  .director-name {
+    font-family: var(--font-display-jp);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .director-name .en {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 10px;
+    opacity: 0.6;
+  }
+  .director-role {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    opacity: 0.65;
+  }
+
+  /* ================== FOOTER ================== */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 100px 0 40px;
+    position: relative;
+    z-index: 2;
+  }
+  .footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .footer-cta {
+    border-top: 1px solid rgba(247, 241, 229, 0.2);
+    border-bottom: 1px solid rgba(247, 241, 229, 0.2);
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  .footer-cta h3 {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 350;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  .footer-cta .jp {
+    font-family: var(--font-display-jp);
+    font-style: normal;
+    display: block;
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 500;
+  }
+  .footer-cta-btn {
+    background: var(--mustard);
+    color: var(--ink);
+    padding: 22px 40px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s;
+  }
+  .footer-cta-btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--paper); }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  .footer-col h5 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .footer-col a {
+    color: var(--paper);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  .footer-col a:hover { opacity: 1; }
+  .footer-brand-title {
+    font-family: var(--font-display-jp);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .footer-brand-en {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .footer-brand-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    opacity: 0.7;
+    max-width: 420px;
+  }
+  .organizer-block {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(247, 241, 229, 0.15);
+  }
+  .organizer-block .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .organizer-block .name {
+    font-family: var(--font-display-jp);
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid rgba(247, 241, 229, 0.15);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+  }
+
+  /* ================== IMAGE PLACEHOLDERS ================== */
+  .img-ph {
+    position: relative;
+    background:
+      repeating-linear-gradient(45deg, rgba(22,21,19,0.04) 0 12px, rgba(22,21,19,0.09) 12px 24px),
+      var(--paper-deep);
+    border: 1px dashed rgba(22,21,19,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .img-ph::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(22,21,19,0.12);
+    pointer-events: none;
+  }
+  .img-ph .ph-label {
+    position: relative;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    text-align: center;
+    max-width: 85%;
+    line-height: 1.5;
+    box-shadow: 2px 2px 0 rgba(22,21,19,0.1);
+  }
+  .img-ph .ph-label .small {
+    display: block;
+    font-size: 9px;
+    opacity: 0.55;
+    margin-top: 4px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+  .img-ph.dark {
+    background:
+      repeating-linear-gradient(45deg, rgba(247,241,229,0.05) 0 12px, rgba(247,241,229,0.12) 12px 24px),
+      rgba(247,241,229,0.04);
+    border-color: rgba(247,241,229,0.3);
+  }
+  .img-ph.dark::before {
+    border-color: rgba(247,241,229,0.15);
+  }
+  .img-ph.dark .ph-label {
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 2px 2px 0 rgba(247,241,229,0.15);
+  }
+
+  /* Hero background placeholder */
+  .hero-bg-ph {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.4;
+    border: none;
+  }
+  .hero-bg-ph::before { display: none; }
+  .hero-bg-ph .ph-label {
+    background: rgba(247, 241, 229, 0.92);
+  }
+
+  /* Pillar icon image */
+  .pillar-img-ph {
+    aspect-ratio: 1 / 1;
+    width: 110px;
+    margin-bottom: 24px;
+  }
+  .pillar-img-ph .ph-label { font-size: 9px; padding: 4px 8px; }
+
+  /* Audience background */
+  .audience { position: relative; overflow: hidden; }
+  .audience-bg-ph {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.3;
+    border: none;
+  }
+  .audience-bg-ph::before { display: none; }
+  .audience-bg-ph .ph-label {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(247, 241, 229, 0.92);
+  }
+  .audience .section-header,
+  .audience-grid { position: relative; z-index: 2; }
+  .audience-card {
+    background: var(--paper) !important;
+    backdrop-filter: blur(4px);
+  }
+
+  /* Side programs background graphic */
+  .side-programs { overflow: hidden; }
+  .side-programs-bg-ph {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.22;
+    border: none;
+    background:
+      repeating-linear-gradient(45deg, rgba(247,241,229,0.12) 0 12px, rgba(247,241,229,0.20) 12px 24px),
+      rgba(247,241,229,0.06);
+  }
+  .side-programs-bg-ph::before { display: none; }
+  .side-programs-bg-ph .ph-label {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 2px 2px 0 rgba(247,241,229,0.2);
+  }
+  .side-programs .section-header,
+  .side-intro,
+  .side-grid { position: relative; z-index: 2; }
+  .side-card-img-ph {
+    aspect-ratio: 16 / 9;
+    margin: -36px -30px 24px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+  .side-card.coming-soon .side-card-img-ph {
+    border-color: rgba(247,241,229,0.3);
+    margin: -36px -30px 24px;
+  }
+
+  /* Main program banner */
+  .main-banner-ph {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+  }
+  .main-banner-ph .img-ph {
+    aspect-ratio: 21 / 8;
+  }
+
+  /* Lightning Talk presenter grid */
+  .lt-presenters {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 14px;
+  }
+  .lt-presenter {
+    padding: 12px;
+    border: 1px solid rgba(22,21,19,0.2);
+    background: var(--paper);
+    transition: border-color 0.2s;
+  }
+  .lt-presenter:hover { border-color: var(--magenta); }
+  .lt-presenter-img-ph {
+    aspect-ratio: 1 / 1;
+    margin-bottom: 12px;
+  }
+  .lt-presenter-img-ph .ph-label { font-size: 8px; padding: 3px 6px; }
+  .lt-presenter-num {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    opacity: 0.4;
+    margin-bottom: 4px;
+  }
+  .lt-presenter-name {
+    font-family: var(--font-display-jp);
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(22,21,19,0.4);
+    line-height: 1.4;
+  }
+  .lt-presenter-role {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    opacity: 0.35;
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Program banner inside program-info */
+  .program-banner-ph {
+    margin-top: 20px;
+    aspect-ratio: 16 / 6;
+  }
+
+  /* Award section background */
+  .award { overflow: hidden; }
+  .award-bg-ph {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.25;
+    border: none;
+    background:
+      repeating-linear-gradient(45deg, rgba(247,241,229,0.10) 0 12px, rgba(247,241,229,0.18) 12px 24px),
+      rgba(247,241,229,0.04);
+  }
+  .award-bg-ph::before { display: none; }
+  .award-bg-ph .ph-label {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 2px 2px 0 rgba(247,241,229,0.2);
+  }
+  .award .section-header,
+  .award-content { position: relative; z-index: 2; }
+
+  /* ================== ANIMATIONS ================== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-grid > * { animation: fadeUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
+  .hero-meta { animation-delay: 0.1s; }
+  .hero-title { animation-delay: 0.2s; }
+  .hero-subtitle { animation-delay: 0.4s; }
+  .hero-info { animation-delay: 0.5s; }
+  .hero-cta-row { animation-delay: 0.6s; }
+
+  /* ================== RESPONSIVE ================== */
+  @media (max-width: 960px) {
+    nav { padding: 14px 20px; }
+    nav .nav-links { display: none; }
+    .hero { padding: 100px 20px 60px; }
+    .section-header { padding: 0 20px; grid-template-columns: 1fr; gap: 12px; }
+    .about-content { grid-template-columns: 1fr; gap: 50px; padding: 0 20px; }
+    .pillars { grid-template-columns: 1fr; padding: 0 20px; }
+    .audience-grid { padding: 0 20px; }
+    .flow-container { padding: 0 20px; }
+    .side-intro { padding-left: 20px; padding-right: 20px; }
+    .side-grid { padding: 0 20px; }
+    .program-container { padding: 0 20px; }
+    .program-item { grid-template-columns: 1fr; gap: 12px; }
+    .program-time { font-size: 24px; }
+    .award-content { grid-template-columns: 1fr; gap: 40px; padding: 0 20px; }
+    .call-grid { grid-template-columns: 1fr; padding: 0 20px; }
+    .sponsor-intro { padding: 0 20px; }
+    .sponsor-tiers { padding: 0 20px; }
+    .tier { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+    .ap-content { grid-template-columns: 1fr; padding: 0 20px; gap: 40px; }
+    .assoc-content { grid-template-columns: 1fr; padding: 0 20px; gap: 40px; }
+    .footer-content { padding: 0 20px; }
+    .footer-cta { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; }
+    .lt-slots { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><img src="images/logo.png" style="width:200px;"></div>
+  <div class="nav-links">
+    <a href="#concept">Concept</a>
+    <a href="#program">Program</a>
+    <a href="#award">Award</a>
+    <a href="#call">Join Us</a>
+    <a href="#sponsors">Sponsors</a>
+  </div>
+  <a href="#apply" class="apply-btn">Apply →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- IMAGE: Hero背景 — メインビジュアル（アート画像） -->
+  <img src="images/hero/hero-bg.png" alt="" class="hero-bg-ph"
+     style="width:100%; height:100%; object-fit:cover;">
+
+  <div class="hero-year">2026</div>
+  <div class="shape shape-1"></div>
+  <div class="shape shape-2"></div>
+  <div class="shape shape-3"></div>
+
+  <div class="hero-grid">
+    <div class="hero-meta">
+      <span>Aug. 03 . 2026</span>
+      <span>Tokyo Innovation Base</span>
+      <span>Vol. 02</span>
+    </div>
+
+    <h1 class="hero-title">
+      THE<br>
+      <span class="stroke">Entrepreneur</span><br>
+      <span class="blob">Art</span> Day
+    </h1>
+
+    <p class="hero-subtitle">
+      ビジネスとアートが交わる、<br>
+      実践者たちの集い。
+    </p>
+
+    <div class="hero-info">
+      <div class="info-item">
+        <span class="label">Date</span>
+        <span class="value">2026.<span class="en">08.03</span></span>
+      </div>
+      <div class="info-item">
+        <span class="label">Venue</span>
+        <span class="value">Tokyo<br>Innovation Base</span>
+      </div>
+      <div class="info-item">
+        <span class="label">Capacity</span>
+        <span class="value">200<span class="en"> guests</span></span>
+      </div>
+      <div class="info-item">
+        <span class="label">Admission</span>
+        <span class="value">無料<br><span class="en" style="font-size:12px; opacity:0.6;">招待 / 審査制</span></span>
+      </div>
+    </div>
+
+    <div class="hero-cta-row">
+      <a href="#apply" class="btn-primary">参加申込 <span class="arrow">→</span></a>
+      <a href="#concept" class="btn-ghost">Read the manifesto</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT / ABOUT -->
+<section class="about" id="concept">
+  <div class="section-header">
+    <span class="section-number">01 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">Concept</span>
+      <h2 class="section-title"><span class="italic">Why</span> <span class="jp">私たちは集まるのか</span></h2>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <div class="quote-block">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">
+        人生のすべてを懸けて社会と対峙する起業家が、<br>
+        あらゆるハードシングスを超えて至った境地で、<br>
+        心に抱くもの。<br><br>
+        それがアートとして描かれた時に、<br>
+        創られる世界を見てみたい。
+      </p>
+      <p class="quote-attribution">— Entrepreneur Art Association</p>
+    </div>
+
+    <div class="about-text">
+      <p>
+        <span class="highlight">THE ENTREPRENEUR ART DAY</span> は、ビジネスとアートの間に立ち続ける実践者たちが、年に一度集う場です。
+      </p>
+      <p>
+        起業家アート協会は、起業家がその生き様を経たからこそ描くことのできる作品を、<strong>プロフィールやストーリーとセット</strong>でひとつのアートとして提示する——「起業家アート」というジャンルを推進する非営利団体です。
+      </p>
+      <p>
+        ビジネスセクターとアートセクターの距離を縮め、文化度の高い起業家を生み、日本のアートシーンに経済的な力を注ぐ。その活動の集大成として、本カンファレンスを開催します。
+      </p>
+    </div>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <img src="images/pillars/pillar-01.png" alt="" class="pillar-img-ph"
+     style="object-fit:cover;">
+      <div class="pillar-num">01</div>
+      <h3>啓蒙と橋渡し</h3>
+      <p>起業家アートの普及・推進により、ビジネスセクターとアートセクターの間にある分断を、対話と実践でつなぎ直す。</p>
+    </div>
+    <div class="pillar">
+      <img src="images/pillars/pillar-02.png" alt="" class="pillar-img-ph"
+     style="object-fit:cover;">
+      <div class="pillar-num">02</div>
+      <h3>文化度の高い起業家の創出</h3>
+      <p>起業家がアートを活用する力を高め、事業活動に思想と美意識を宿す。経営の核に文化を据える起業家を増やす。</p>
+    </div>
+    <div class="pillar">
+      <img src="images/pillars/pillar-03.png" alt="" class="pillar-img-ph"
+     style="object-fit:cover;">
+      <div class="pillar-num">03</div>
+      <h3>アートシーンへの経済注入</h3>
+      <p>アーティストと起業家の事業活動の接点を増やし、日本のアートシーンに持続的な経済の力を生み出す。</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience">
+  <!-- IMAGE: Audience背景 — セクション全体の背景画像 -->
+  <img src="images/audience/audience-bg.png" alt="" class="audience-bg-ph"
+     style="width:100%; height:100%; object-fit:cover;">
+
+  <div class="section-header">
+    <span class="section-number">02 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">For Whom</span>
+      <h2 class="section-title"><span class="italic">For</span> <span class="jp">この一日を待っていた、あなたへ</span></h2>
+    </div>
+  </div>
+
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="audience-num">→ 01</div>
+      <h4>アートを<br>活かす<br>ビジネスの人</h4>
+      <p>事業に美意識と文化を取り込みたい経営者・事業責任者。</p>
+    </div>
+    <div class="audience-card">
+      <div class="audience-num">→ 02</div>
+      <h4>ビジネスに<br>活用されたい<br>アートの人</h4>
+      <p>作品や活動を、社会と経済の中で循環させたいアーティスト。</p>
+    </div>
+    <div class="audience-card">
+      <div class="audience-num">→ 03</div>
+      <h4>ビジネスと<br>アートの間で<br>活動する人</h4>
+      <p>キュレーター、プロデューサー、評論家、研究者、編集者。境界を行き来する実践者たち。</p>
+    </div>
+    <div class="audience-card">
+      <div class="audience-num">→ 04</div>
+      <h4>カルチャーを<br>事業にする人</h4>
+      <p>文化事業・芸能・伝統工芸・地域文化を、経済として駆動させる起業家。</p>
+    </div>
+    <div class="audience-card">
+      <div class="audience-num">→ 05</div>
+      <h4>アート&<br>ビジネスに<br>興味のある人</h4>
+      <p>この二つの世界の交差点に、まだ見ぬ可能性を感じるすべての人。</p>
+    </div>
+  </div>
+</section>
+
+<!-- DAY FLOW OVERVIEW -->
+<section class="day-flow" id="program">
+  <div class="section-header">
+    <span class="section-number">03 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">Schedule Overview</span>
+      <h2 class="section-title"><span class="italic">A</span> <span class="jp">一日の流れ</span></h2>
+    </div>
+  </div>
+
+  <div class="flow-container">
+    <div class="flow-track">
+      <div class="flow-line"></div>
+
+      <div class="flow-item major">
+        <div class="flow-dot"></div>
+        <div class="flow-time">13:00</div>
+        <div class="flow-title">開場・アワード作品展</div>
+        <div class="flow-desc">ENTREPRENEUR ART AWARD 2026 ノミネート作品展がスタート。会場全体がギャラリーになる。</div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-dot"></div>
+        <div class="flow-time">16:00 – 18:00</div>
+        <div class="flow-title">Side Programs（複数同時開催）</div>
+        <div class="flow-desc">ツクルナイト、ミュージックフロムアート、他。それぞれが体験型のアートプログラム。</div>
+      </div>
+
+      <div class="flow-item major">
+        <div class="flow-dot"></div>
+        <div class="flow-time">18:30 – 21:30</div>
+        <div class="flow-title">Main Conference</div>
+        <div class="flow-desc">キーノート、ライトニングトーク、アワード発表。実践者たちのリアルな声が集まる本編。</div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-dot"></div>
+        <div class="flow-time">22:00 –</div>
+        <div class="flow-title">Official After Party</div>
+        <div class="flow-desc">公式アフターパーティー。一日を共有した仲間と、夜まで対話を続ける。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIDE PROGRAMS -->
+<section class="side-programs">
+  <!-- IMAGE: Side Programs背景 — グラフィック -->
+  <img src="images/side-programs/side-bg.png" alt="" class="side-programs-bg-ph"
+     style="width:100%; height:100%; object-fit:cover;">
+
+  <div class="section-header">
+    <span class="section-number">04 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">16:00 – 18:00 · Side Programs</span>
+      <h2 class="section-title"><span class="italic">Side</span> サブプログラム</h2>
+    </div>
+  </div>
+
+  <p class="side-intro">
+    本編開始前の2時間、会場では複数のサブプログラムが同時並行で進みます。<br>
+    自分の関心に合わせて選び、深く一つを体験してください。
+  </p>
+
+  <div class="side-grid">
+    <div class="side-card">
+      <div class="img-ph side-card-img-ph">
+        <div class="ph-label">Program Image<span class="small">ツクルナイト</span></div>
+      </div>
+      <span class="tag">Program A</span>
+      <h4>ツクルナイト</h4>
+      <p>内面を抽象画で表現し、対話型鑑賞によって自他の気づきを得るアートプログラム。絵心は不要、必要なのは「描いてみる」その一歩だけ。</p>
+      <a href="#" class="card-link">Peatixで申込 →</a>
+      <div class="price-note">¥— / 別途有料</div>
+    </div>
+
+    <div class="side-card">
+      <div class="img-ph side-card-img-ph">
+        <div class="ph-label">Program Image<span class="small">ミュージックフロムアート</span></div>
+      </div>
+      <span class="tag">Program B</span>
+      <h4>ミュージック<br>フロムアート</h4>
+      <p>アートから、内面から、言葉にならない何かから音楽を作り出す——新しい創作のアプローチを、その場で体験する。</p>
+      <a href="#" class="card-link">Peatixで申込 →</a>
+      <div class="price-note">¥— / 別途有料</div>
+    </div>
+
+    <div class="side-card coming-soon">
+      <div class="img-ph side-card-img-ph dark">
+        <div class="ph-label">Program Image<span class="small">Program C</span></div>
+      </div>
+      <span class="tag">Program C</span>
+      <h4>Coming Soon</h4>
+      <p>新たな企画を準備中。詳細が決まり次第、こちらに公開します。</p>
+      <a href="#call" class="card-link">企画を持ち込む →</a>
+    </div>
+
+    <div class="side-card coming-soon">
+      <div class="img-ph side-card-img-ph dark">
+        <div class="ph-label">Program Image<span class="small">D / E / F</span></div>
+      </div>
+      <span class="tag">Program D – F</span>
+      <h4>More to come</h4>
+      <p>サブプログラム枠は引き続き募集中。あなたが場をつくる側に回ることもできます。</p>
+      <a href="#call" class="card-link">企画を持ち込む →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN PROGRAM -->
+<section class="main-program">
+  <div class="section-header">
+    <span class="section-number">05 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">18:30 – 21:30 · Main Conference</span>
+      <h2 class="section-title"><span class="italic">Main</span> 本プログラム</h2>
+    </div>
+  </div>
+
+  <!-- IMAGE: Main Program バナー -->
+  <div class="main-banner-ph">
+  <img src="images/main-program/main-banner.png" alt="Main Program"
+       style="width:100%; aspect-ratio: 21 / 8; object-fit:cover; display:block;">
+  </div>
+
+  <div class="program-container">
+    <div class="program-item">
+      <div>
+        <div class="program-time">18:30</div>
+        <div class="program-time-end">– 18:45</div>
+      </div>
+      <div class="program-info">
+        <span class="program-cat">Keynote</span>
+        <h4>起業家アート協会の活動報告 &<br>ビジネス×アートの未来</h4>
+        <p>協会の一年の歩み、そしてこれから日本のビジネスとアートが向かう先について、代表理事が語る。</p>
+        <div class="speaker">麻生 要一 <span class="role">代表理事 / Entrepreneur Artist</span></div>
+      </div>
+    </div>
+
+    <div class="program-item">
+      <div>
+        <div class="program-time">18:45</div>
+        <div class="program-time-end">– 19:00</div>
+      </div>
+      <div class="program-info">
+        <span class="program-cat">Special Session</span>
+        <h4>ビジネス&アートの最前線<br>— ビジネス&アートアワード開催報告とともに</h4>
+        <p>国としてのアート産業政策の最前線。経済産業省が捉える、これからの日本のアートシーン。</p>
+        <div class="speaker">経済産業省 アート産業チーム</div>
+      </div>
+    </div>
+
+    <div class="program-item">
+      <div>
+        <div class="program-time">19:00</div>
+        <div class="program-time-end">– 20:00</div>
+      </div>
+      <div class="program-info">
+        <span class="program-cat">Lightning Talks</span>
+        <h4>ビジネス×アート ライトニングトーク<br><span style="font-family:var(--font-display-en); font-style:italic; opacity:0.5; font-size:0.7em;">5 minutes × 12 slots</span></h4>
+        <p>ビジネスとアートの間で活動する12人の活動家による、5分間の生の話。理論ではなく、現場の声。</p>
+        <div class="lt-presenters">
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 01</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 02</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 03</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 04</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 05</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 06</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 07</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 08</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 09</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 10</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 11</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+          <div class="lt-presenter">
+            <div class="img-ph lt-presenter-img-ph"><div class="ph-label">Photo</div></div>
+            <div class="lt-presenter-num">LT 12</div>
+            <div class="lt-presenter-name">登壇者名</div>
+            <div class="lt-presenter-role">肩書き / 所属</div>
+          </div>
+        </div>
+        <a href="#call" class="award-link" style="margin-top:24px;">登壇者を募集中 →</a>
+      </div>
+    </div>
+
+    <div class="program-item">
+      <div>
+        <div class="program-time">20:00</div>
+        <div class="program-time-end">– 20:15</div>
+      </div>
+      <div class="program-info">
+        <span class="program-cat">Award Talk</span>
+        <h4>ENTREPRENEUR ART AWARD 2025<br>受賞者トーク</h4>
+        <p>昨年の受賞者が、受賞からの一年で起きた変化と、これからを語る。</p>
+        <div class="img-ph program-banner-ph">
+          <div class="ph-label">Banner Image<span class="small">Award 2025 受賞者バナー</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-item">
+      <div>
+        <div class="program-time">20:15</div>
+        <div class="program-time-end">– 20:30</div>
+      </div>
+      <div class="program-info">
+        <span class="program-cat">Award Ceremony</span>
+        <h4>ENTREPRENEUR ART AWARD 2026<br>受賞者発表・審査員コメント</h4>
+        <p>2026年度の受賞作品をこの場で発表。審査員が、選定の理由と起業家アートのこれからを語る。</p>
+        <div class="img-ph program-banner-ph">
+          <div class="ph-label">Banner Image<span class="small">Award 2026 受賞発表バナー</span></div>
+        </div>
+        <a href="#award" class="award-link">Award の詳細を見る →</a>
+      </div>
+    </div>
+
+    <div class="program-item">
+      <div>
+        <div class="program-time">20:30</div>
+        <div class="program-time-end">– 21:30</div>
+      </div>
+      <div class="program-info">
+        <span class="program-cat">Networking</span>
+        <h4>ネットワーキング</h4>
+        <p>登壇者・参加者・出展者・スポンサーが入り混じる、自由対話の時間。今日の出会いが、明日の事業になる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARD -->
+<section class="award" id="award">
+  <!-- IMAGE: Award背景 -->
+  <img src="images/award/award-bg.png" alt="" class="award-bg-ph"
+     style="width:100%; height:100%; object-fit:cover;">
+
+  <div class="section-header">
+    <span class="section-number">06 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">The Award</span>
+      <h2 class="section-title"><span class="italic">Award</span> アワード</h2>
+    </div>
+  </div>
+
+  <div class="award-content">
+    <div>
+      <div class="award-big-text">Entrepreneur<br>Art<br>Award<br>2026</div>
+      <div class="award-jp">起業家が描く、起業家の生き様。<br>その一年を象徴する一枚を選ぶ。</div>
+    </div>
+    <div class="award-desc">
+      <p>
+        ENTREPRENEUR ART AWARD は、起業家アートの一年を象徴する作品を顕彰するアワードです。
+        作品単体の美的評価ではなく、起業家としての歩み・思想・事業との連関を含めた総合的な視点で審査します。
+      </p>
+      <p>
+        2026年度のノミネート作品は会場13:00より展示開始。受賞作品は本プログラム内（20:15〜）で発表されます。
+      </p>
+      <a href="#" class="award-cta">Award 専用ページへ <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CALL FOR PARTICIPANTS -->
+<section class="call" id="call">
+  <div class="section-header">
+    <span class="section-number">07 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">Open Call</span>
+      <h2 class="section-title"><span class="italic">Join</span> <span class="jp">場をつくる側に回る</span></h2>
+    </div>
+  </div>
+
+  <div class="call-grid">
+    <div class="call-card">
+      <span class="call-tag">Call 01</span>
+      <div class="call-num">01</div>
+      <h4>出展者募集</h4>
+      <p>ENTREPRENEUR ART AWARD 2026 ノミネート作品展、および会場全体の作品展示にご出展いただける起業家アーティストを募集します。</p>
+      <a href="#" class="call-link">応募する →</a>
+    </div>
+    <div class="call-card">
+      <span class="call-tag">Call 02</span>
+      <div class="call-num">02</div>
+      <h4>ライトニングトーク<br>登壇者募集</h4>
+      <p>5分間で、ビジネスとアートの間で自分が見ている景色を語ってください。12枠を募集します。</p>
+      <a href="#" class="call-link">応募する →</a>
+    </div>
+    <div class="call-card">
+      <span class="call-tag">Call 03</span>
+      <div class="call-num">03</div>
+      <h4>ワークショップ<br>実施者募集</h4>
+      <p>16:00〜18:00のサイドプログラム枠で、独自のワークショップ／体験プログラムを開催いただける方を募集します。</p>
+      <a href="#" class="call-link">応募する →</a>
+    </div>
+    <div class="call-card">
+      <span class="call-tag">Call 04</span>
+      <div class="call-num">04</div>
+      <h4>スポンサー・<br>協賛企業募集</h4>
+      <p>ビジネスとアートの交差点で起こる出会いに、共に投資いただける企業を募集しています。複数のティアをご用意。</p>
+      <a href="#" class="call-link">資料請求・問い合わせ →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsors" id="sponsors">
+  <div class="section-header">
+    <span class="section-number">08 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">Sponsors</span>
+      <h2 class="section-title"><span class="italic">Partners</span> 協賛企業</h2>
+    </div>
+  </div>
+
+  <p class="sponsor-intro">
+    THE ENTREPRENEUR ART DAY 2026 は、ビジネスとアートの未来に投資する企業の皆さまと共につくります。<br>
+    協賛企業は決定次第、こちらで発表いたします。
+  </p>
+
+  <div class="sponsor-tiers">
+    <div class="tier gold">
+      <div class="tier-name">Gold<span class="jp">Gold Partners</span></div>
+      <div class="tier-slots">
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+      </div>
+    </div>
+    <div class="tier silver">
+      <div class="tier-name">Silver<span class="jp">Silver Partners</span></div>
+      <div class="tier-slots">
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+      </div>
+    </div>
+    <div class="tier bronze">
+      <div class="tier-name">Bronze<span class="jp">Bronze Partners</span></div>
+      <div class="tier-slots">
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+        <div class="tier-slot">Coming Soon</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recruit-banner">
+    <p>協賛企業を募集しています。<br>ビジネスとアートの未来に、共に投資しませんか。</p>
+    <a href="#" >資料請求・お問い合わせ →</a>
+  </div>
+</section>
+
+<!-- AFTER PARTY -->
+<section class="after-party">
+  <div class="ap-bg"></div>
+  <div class="ap-content">
+    <div>
+      <div class="ap-label">— Official After Party</div>
+      <h3 class="ap-title">After<br>Hours.</h3>
+      <p class="ap-jp">公式アフターパーティー</p>
+    </div>
+    <div class="ap-info">
+      <span class="time">22:00 →</span>
+      <p>
+        本プログラム終了後、会場を移して公式アフターパーティーを開催します。<br>
+        今日生まれた対話を、夜の時間に持ち込みましょう。<br><br>
+        ※別途お申込みが必要です。
+      </p>
+      <a href="#" class="ap-cta">Peatixで申込 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT ASSOCIATION -->
+<section class="assoc">
+  <div class="section-header">
+    <span class="section-number">09 / 09</span>
+    <div class="section-title-row">
+      <span class="section-eyebrow">About the Association</span>
+      <h2 class="section-title"><span class="italic">EAA</span> <span class="jp">起業家アート協会について</span></h2>
+    </div>
+  </div>
+
+  <div class="assoc-content">
+    <div class="assoc-text">
+      <p>
+        一般社団法人 起業家アート協会（Entrepreneur Art Association）は、起業家とアートがつながる世界をつくる非営利団体です。
+      </p>
+      <p>
+        起業家アートの啓蒙、普及、推進。文化度の高い起業家の創出。アートシーンへの経済の注入。この三つを目的に、2025年2月に設立しました。
+      </p>
+      <p>
+        本カンファレンスは、その活動の一年の集大成であり、次の一年への出発点です。
+      </p>
+    </div>
+    <div class="directors">
+      <div class="director">
+        <div class="director-name">麻生 要一 <span class="en">Yoichi Aso</span></div>
+        <div class="director-role">代表理事 · 起業家アーティスト / 株式会社アルファドライブ 代表取締役社長兼CEO</div>
+      </div>
+      <div class="director">
+        <div class="director-name">西村 晃 <span class="en">Akira Nishimura</span></div>
+        <div class="director-role">代表理事 · 株式会社事業人 代表取締役</div>
+      </div>
+      <div class="director">
+        <div class="director-name">新田 卓 <span class="en">Takashi Nitta</span></div>
+        <div class="director-role">代表理事 · 株式会社プラスアート 代表取締役</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="apply">
+  <div class="footer-content">
+    <div class="footer-cta">
+      <h3>Apply now.<span class="jp">参加申込・お問い合わせ</span></h3>
+      <a href="#" class="footer-cta-btn">参加申込 →</a>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand-title">THE ENTREPRENEUR ART DAY 2026</div>
+        <div class="footer-brand-en">— Where business meets art.</div>
+        <p class="footer-brand-desc">
+          ビジネスとアートが交わる実践者たちの集い。<br>
+          2026年8月3日、Tokyo Innovation Base にて開催。
+        </p>
+        <div class="organizer-block">
+          <div class="label">Organized by</div>
+          <div class="name">一般社団法人 起業家アート協会</div>
+        </div>
+        <!-- 共催枠（必要に応じてここに追加） -->
+        <!--
+        <div class="organizer-block">
+          <div class="label">Co-organized by</div>
+          <div class="name">共催企業名</div>
+        </div>
+        -->
+      </div>
+
+      <div class="footer-col">
+        <h5>Event</h5>
+        <ul>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#award">Award</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Join</h5>
+        <ul>
+          <li><a href="#call">出展者募集</a></li>
+          <li><a href="#call">LT登壇者募集</a></li>
+          <li><a href="#call">ワークショップ募集</a></li>
+          <li><a href="#sponsors">スポンサー募集</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Association</h5>
+        <ul>
+          <li><a href="https://entrepreneur-art.com/">公式サイト</a></li>
+          <li><a href="https://entrepreneur-art.com/news">ニュース</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Entrepreneur Art Association</span>
+      <span>THE ENTREPRENEUR ART DAY · Vol. 02</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
