@@ -126,6 +126,216 @@
   }
   nav .apply-btn:hover { background: var(--magenta); }
 
+  /* ================== CLOSING / HIGHLIGHT ================== */
+  .closing {
+    padding: 150px 0 0;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .closing-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: repeating-linear-gradient(-45deg, var(--paper) 0 1px, transparent 1px 28px);
+  }
+  .closing-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px 110px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .closing-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid rgba(247, 241, 229, 0.35);
+    margin-bottom: 36px;
+  }
+  .closing-status .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--magenta);
+  }
+  .closing-title {
+    font-family: var(--font-display-en);
+    font-size: clamp(64px, 8.5vw, 132px);
+    font-weight: 300;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+  }
+  .closing-title .italic { font-style: italic; }
+  .closing-title .blob {
+    display: inline-block;
+    padding: 0 0.12em;
+    background: var(--mustard);
+    color: var(--ink);
+    transform: rotate(-2deg);
+    font-style: italic;
+  }
+  .closing-lead {
+    font-family: var(--font-display-jp);
+    font-size: clamp(18px, 1.7vw, 24px);
+    font-weight: 500;
+    line-height: 1.8;
+    margin-top: 40px;
+  }
+  .closing-lead::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--magenta);
+    margin-bottom: 24px;
+  }
+  .closing-lead .name {
+    display: block;
+    font-family: var(--font-display-en);
+    font-size: 0.72em;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--mustard);
+    margin-bottom: 6px;
+  }
+  .closing-text {
+    font-size: 14px;
+    line-height: 2;
+    opacity: 0.72;
+    margin-top: 20px;
+    max-width: 480px;
+  }
+  .closing-meta {
+    margin-top: 40px;
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+
+  .highlight-frame { position: relative; }
+  .highlight-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(247, 241, 229, 0.35);
+  }
+  .highlight-label .en {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 350;
+  }
+  .highlight-label .en .jp {
+    font-family: var(--font-display-jp);
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 12px;
+    opacity: 0.8;
+  }
+  .highlight-label .num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--mustard);
+    white-space: nowrap;
+  }
+  .highlight-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    box-shadow: 14px 14px 0 var(--magenta);
+    outline: 1px solid rgba(247, 241, 229, 0.25);
+    outline-offset: 10px;
+  }
+  .highlight-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .highlight-shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .highlight-shape.s1 { top: -34px; right: -34px; width: 44px; height: 44px; border-radius: 50%; background: var(--mustard); }
+  .highlight-shape.s2 { bottom: -36px; left: -36px; width: 22px; height: 22px; background: var(--cobalt); }
+  .highlight-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 44px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--paper);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--paper);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .highlight-link:hover { color: var(--mustard); border-color: var(--mustard); }
+
+  .closing-marquee {
+    position: relative;
+    z-index: 2;
+    background: var(--mustard);
+    color: var(--ink);
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .closing-marquee-track {
+    display: inline-flex;
+    padding: 14px 0;
+    animation: marquee 40s linear infinite;
+  }
+  .closing-marquee-track span {
+    font-family: var(--font-display-en);
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 0 28px;
+  }
+  .closing-marquee-track span.jp {
+    font-family: var(--font-display-jp);
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .closing-marquee-track span.sep { font-style: normal; padding: 0; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .closing-marquee-track { animation: none; }
+  }
+
   /* ================== HERO ================== */
   .hero {
     min-height: 100vh;
@@ -1457,6 +1667,13 @@
     nav { padding: 14px 20px; }
     nav .nav-links { display: none; }
     .hero { padding: 100px 20px 60px; }
+    .closing { padding-top: 110px; }
+    .closing-inner { grid-template-columns: 1fr; gap: 56px; padding: 0 20px 80px; }
+    .closing-lead { margin-top: 28px; }
+    .highlight-label .en .jp { display: block; margin-left: 0; margin-top: 4px; }
+    .highlight-video { box-shadow: 8px 8px 0 var(--magenta); outline-offset: 6px; }
+    .highlight-shape.s1 { top: -20px; right: -12px; width: 28px; height: 28px; }
+    .highlight-shape.s2 { bottom: -24px; left: -12px; width: 16px; height: 16px; }
     .section-header { padding: 0 20px; grid-template-columns: 1fr; gap: 12px; }
     .about-content { grid-template-columns: 1fr; gap: 50px; padding: 0 20px; }
     .pillars { grid-template-columns: 1fr; padding: 0 20px; }
@@ -1487,6 +1704,7 @@
 <nav>
   <div class="brand"><img src="images/logo.png" style="width:200px;"></div>
   <div class="nav-links">
+    <a href="#highlight">Highlight</a>
     <a href="#concept">Concept</a>
     <a href="#program">Program</a>
     <a href="#award">Award</a>
@@ -1495,6 +1713,60 @@
   </div>
   <a href="#apply" class="apply-btn">Apply →</a>
 </nav>
+
+<!-- CLOSING / HIGHLIGHT -->
+<section class="closing" id="highlight">
+  <div class="closing-bg"></div>
+
+  <div class="closing-inner">
+    <div class="closing-message">
+      <div class="closing-status"><span class="dot"></span>Event Closed — 2026.08.24</div>
+
+      <h2 class="closing-title">
+        <span class="italic">Thank</span><br>
+        <span class="blob">you.</span>
+      </h2>
+
+      <p class="closing-lead">
+        <span class="name">THE ENTREPRENEUR ART DAY 2026</span>
+        盛況のうちに閉幕いたしました。
+      </p>
+      <p class="closing-text">
+        ご来場いただいた皆さま、登壇者・出展者の皆さま、ご協賛いただいた企業の皆さま、運営にご協力いただいたすべての方に、心より御礼申し上げます。当日の熱気を収めたハイライト映像を公開しました。
+      </p>
+
+      <div class="closing-meta">
+        <span>Tokyo Innovation Base</span>
+        <span>Vol. 02</span>
+      </div>
+    </div>
+
+    <div class="highlight-frame">
+      <div class="highlight-label">
+        <span class="en">Highlight Movie<span class="jp">ハイライト映像</span></span>
+        <span class="num">▶ PLAY</span>
+      </div>
+      <div class="highlight-video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/xNV7ZmO4tno?rel=0"
+          title="THE ENTREPRENEUR ART DAY 2026 ハイライト映像"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <div class="highlight-shape s1"></div>
+        <div class="highlight-shape s2"></div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=xNV7ZmO4tno" class="highlight-link" target="_blank" rel="noopener">YouTubeで観る <span>↗</span></a>
+    </div>
+  </div>
+
+  <div class="closing-marquee" aria-hidden="true">
+    <div class="closing-marquee-track">
+      <span>Thank you for coming</span><span class="sep">✺</span><span class="jp">ありがとうございました</span><span class="sep">✺</span><span>See you next year</span><span class="sep">✺</span><span class="jp">また来年お会いしましょう</span><span class="sep">✺</span>
+      <span>Thank you for coming</span><span class="sep">✺</span><span class="jp">ありがとうございました</span><span class="sep">✺</span><span>See you next year</span><span class="sep">✺</span><span class="jp">また来年お会いしましょう</span><span class="sep">✺</span>
+    </div>
+  </div>
+</section>
 
 <!-- HERO -->
 <section class="hero">
